@@ -1,4 +1,6 @@
 var testSorting = require("./testSorting"),
-    insertionSort = require("../insertionSort");
+    insertionSort = require("../insertionSort"),
+    selectionSort = require("../selectionSort");
 
 testSorting(insertionSort, "Insertion Sort");
+testSorting(selectionSort, "Selection Sort");
