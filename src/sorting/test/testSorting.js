@@ -34,8 +34,11 @@ function testSortingAlgorithm(sort, title){
     }
 
     tape(title, function(t){
+        var arrCopy;
+
         for(var key in values){
-            t.ok(isSorted(sort(values[key])), key);
+            arrCopy = values[key].slice();
+            t.ok(isSorted(sort(arrCopy)), key);
         }
 
         t.end();
